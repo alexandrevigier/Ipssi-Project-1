@@ -27,7 +27,7 @@ class User
     private $password;
 
     /**
-     * @ORM\Column(type="binary", nullable=true)
+     * @ORM\Column(type="binary", nullable=false)
      */
     private $administrator;
 

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1 style="text-align: center">Iscription</h1>
+    <hr><hr>
+    <div class="form-group">
+        {{ form_start(UserType) }}
+        {{ form_row(UserType.name, {
+            'label': "Name: ",
+            'attr': {
+                class: "form-control"
+            }
+        }) }}
+        {{ form_row(UserType.first_name, {
+            'label': "First name: ",
+            'attr': {
+                class: "form-control"
+            }
+        }) }}
+        {{ form_row(UserType.mail, {
+            'label': "Mail: ",
+            'attr': {
+                class: "form-control"
+            }
+        }) }}
+        {{form_row(UserType.password, {
+            'label': "Password: ",
+            'attr': {
+                class: "form-control",
+            },
+            'type': "password"
+        }) }}
+        {{ form_errors(UserType) }}
+        {{ form_rest(UserType) }}
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        {{ form_end(UserType) }}
+    </div>
+</div>
+{% endblock %}
